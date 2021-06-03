@@ -3463,6 +3463,12 @@ var Application = function() {
 }
 
 window.application = new Application();
+	
+	async function playAudio(url, redurl) {
+ await new Audio(url).play();
+ setTimeout(function(){ window.location.href = redurl; }, 1000);
+}
+	
 </script>
 </head>
 <body>
