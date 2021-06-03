@@ -1,0 +1,37 @@
+<script
+                    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+<meta charset="UTF-8" />
+<head >
+	<div id = 'anim'>
+		</div>
+	<link rel="stylesheet" href="demo.css">
+</head>
+<script
+                    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
+<script>
+    console.log('hello');
+	var animData = {
+    container: document.getElementById('anim'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    src: 'https://assets8.lottiefiles.com/packages/lf20_5j5wobgu.json'
+};
+
+var anim = bodymovin.loadAnimation(animData);
+
+// function for DOM Loading 
+anim.addEventListener('DOMLoaded', function(e) { 
+    console.log('DOM loaded'); 
+});
+
+// function for Completion of animation   
+anim.addEventListener('complete', test_complete);
+
+function test_complete() {
+    console.log('test completed');
+}
+
+
+</script>
